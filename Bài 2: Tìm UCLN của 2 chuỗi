@@ -1,0 +1,8 @@
+class Solution {
+public:
+    string gcdOfStrings(string str1, string str2) {
+        return (str1+str2 == str2+str1) ?
+        str1.substr(0,gcd(size(str1),size(str2))) : "";
+    }
+};
+// Hướng đi: Tx(str1+str2) == Tx(str2+str1) -> tìm UCLN độ dài 2 chuỗi sau đó lấy từ vị trí đầu đến vị trí UCLN
